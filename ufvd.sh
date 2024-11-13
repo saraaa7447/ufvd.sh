@@ -31,11 +31,11 @@ if [ $_output == "a" ]; then
 	read _file
 
         if [ $_file == "mp3" ]; then
-        ./yt-dlp_macos -x --audio-format mp3 "$_link" --embed-thumbnail --add-metadata
+        yt-dlp_macos -x --audio-format mp3 "$_link" --embed-thumbnail --add-metadata
         elif [ $_file == "opus" ]; then
-	./yt-dlp_macos -x -f bestaudio "$_link"
+	yt-dlp_macos -x -f bestaudio "$_link"
 	else
-	./yt-dlp_macos -x --audio-format m4a "$_link" --embed-thumbnail --add-metadata
+	yt-dlp_macos -x --audio-format m4a "$_link" --embed-thumbnail --add-metadata
 	fi
 fi
 
