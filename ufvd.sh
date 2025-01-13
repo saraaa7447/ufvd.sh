@@ -20,9 +20,9 @@ if [ $_output == "v" ]; then
 
 	if [ $_quality == "best" ]; then
 	echo "Downloading in best quality..."
-	yt-dlp_macos -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' "$_link" --embed-thumbnail
+	yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' "$_link" --embed-thumbnail
 	else
-	yt-dlp_macos -f "best[height<=$_quality]" "$_link" --embed-thumbnail
+	yt-dlp -f "best[height<=$_quality]" "$_link" --embed-thumbnail
 	fi
 fi
 
@@ -31,11 +31,11 @@ if [ $_output == "a" ]; then
 	read _file
 
         if [ $_file == "mp3" ]; then
-        yt-dlp_macos -x --audio-format mp3 "$_link" --embed-thumbnail --add-metadata
+        yt-dlp -x --audio-format mp3 "$_link" --embed-thumbnail --add-metadata
         elif [ $_file == "opus" ]; then
-	yt-dlp_macos -x -f bestaudio "$_link"
+	yt-dlp -x -f bestaudio "$_link"
 	else
-	yt-dlp_macos -x --audio-format m4a "$_link" --embed-thumbnail --add-metadata
+	yt-dlp -x --audio-format m4a "$_link" --embed-thumbnail --add-metadata
 	fi
 fi
 
