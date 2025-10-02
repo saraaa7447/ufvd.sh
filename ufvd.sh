@@ -2,7 +2,7 @@
 
 # Print information
 echo "Universal Free Video Downloader 1.0"
-echo "By ScarlettPPC 2024"
+echo "By Saraaa7447 2024"
 
 
 echo "Enter link to YouTube video or playlist: "
